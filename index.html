@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css">
+    <title>Trippy page</title>
+  </head>
+<body>
+
+  <video autoplay muted loop id="myVideo">
+    <source src="Trippy.mp4" type="video/mp4">
+  </video>
+
+<div class="content">
+  <h1 class="glitch">WELCOME TO A NEW GENERATION</h1>
+  <p style="font-size:110%;"">Create your own reality, go beyond worlds and imaginations</p>
+  <p style="font-size:80%;">click anywhere to play audio</p>
+  <button id="but" onclick="myFunction()">Pause</button>
+</div>
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("but");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+var audio = new Audio("music.mp3");
+
+document.onclick = function() {
+  audio.play();
+}
+</script>
+
+</body>
+</html>
